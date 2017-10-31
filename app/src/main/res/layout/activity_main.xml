@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context="com.example.peter.tsafaapp.LoginActivity">
+    tools:context="com.tsafaapp.LoginActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/logo" />
 
     <EditText
-        android:id="@+id/etmainusernamelogin"
+        android:id="@+id/etmainemaillogin"
         android:layout_width="200dp"
         android:layout_height="20dp"
         android:layout_below="@+id/imageView"
@@ -27,7 +27,7 @@
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_action_user"
         android:ems="10"
-        android:hint="Username"
+        android:hint="Email"
         android:inputType="textPersonName"
         android:textSize="16dp" />
 
@@ -35,7 +35,7 @@
         android:id="@+id/etmainpasswordlogin"
         android:layout_width="200dp"
         android:layout_height="20dp"
-        android:layout_below="@+id/etmainusernamelogin"
+        android:layout_below="@+id/etmainemaillogin"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="34dp"
         android:background="#11000000"

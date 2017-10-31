@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "773928380716",
+    "firebase_url": "https://tsafaapp-1f773.firebaseio.com",
+    "project_id": "tsafaapp-1f773",
+    "storage_bucket": "tsafaapp-1f773.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773928380716:android:1f89e7873934c3fa",
+        "android_client_info": {
+          "package_name": "com.tsafaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "773928380716-unvip0gdtkmmapm8qm3euhfo9cih0bbf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqZ9SrZhS8ybXlb7c3HLjhc5i9HtImRW8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
