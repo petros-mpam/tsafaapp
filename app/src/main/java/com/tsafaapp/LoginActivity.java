@@ -29,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText etmainpasswordlogin = (EditText) findViewById(R.id.etmainpasswordlogin);
         final CardView cvlogin = (CardView) findViewById(R.id.cvlogin);
         final TextView signup = (TextView) findViewById(R.id.signup);
+        final TextView shoppersignup = (TextView) findViewById(R.id.shoppersignup);  //shopperlogin goto1
         firebaseAuth=FirebaseAuth.getInstance();
 
         if(firebaseAuth.getCurrentUser()!=null){
@@ -42,6 +43,14 @@ public class LoginActivity extends AppCompatActivity {
 
                 Intent signupIntent = new Intent(LoginActivity.this,RegisterActivity.class);
                 LoginActivity.this.startActivity(signupIntent);
+            }
+        });
+
+        shoppersignup.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v2){
+                Intent shoppersignupIntent = new Intent(LoginActivity.this,ShopperLoginActivity.class);
+                LoginActivity.this.startActivity(shoppersignupIntent);
             }
         });
 
