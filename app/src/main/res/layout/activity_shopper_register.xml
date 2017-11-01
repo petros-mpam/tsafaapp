@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context="com.tsafaapp.ShopperRegisterActivity">
+
+    <EditText
+        android:id="@+id/etpasswordlogin"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/etrenterpassword"
+        android:layout_below="@+id/etusernamelogin"
+
+
+        android:layout_marginTop="16dp"
+        android:background="#11000000"
+        android:ems="12"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/etusernamelogin"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/etsurname"
+        android:layout_below="@+id/etsurname"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:background="#11000000"
+        android:hint="Username"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etname"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+
+        android:layout_alignEnd="@+id/cardView"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="52dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etsurname"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/etname"
+
+        android:layout_below="@+id/etname"
+        android:layout_marginTop="16dp"
+        android:background="#11000000"
+
+        android:ems="10"
+        android:hint="Surname"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+
+        android:layout_alignStart="@+id/etrenterpassword"
+        android:layout_below="@+id/etrenterpassword"
+        android:layout_marginTop="12dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/etrenterpassword"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+
+        android:layout_alignStart="@+id/etsurname"
+        android:layout_below="@+id/etsurname"
+        android:layout_marginTop="110dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="Re-enter Password"
+        android:inputType="textPassword" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="130dp"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="10dp"
+        android:id="@+id/cardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Register"
+                android:textColor="#fff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Create your acount and advertise your products"
+        android:textColor="#fff"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
