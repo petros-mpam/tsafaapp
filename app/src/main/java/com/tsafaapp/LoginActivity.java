@@ -30,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         final CardView cvlogin = (CardView) findViewById(R.id.cvlogin);
         final TextView signup = (TextView) findViewById(R.id.signup);
         final TextView shoppersignup = (TextView) findViewById(R.id.shoppersignup);  //shopperlogin goto1
+
         firebaseAuth=FirebaseAuth.getInstance();
 
         if(firebaseAuth.getCurrentUser()!=null){

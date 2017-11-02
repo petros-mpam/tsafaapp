@@ -14,6 +14,9 @@ public class ShopperLoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_shopper_login);
 
        final TextView shopsignup = (TextView) findViewById(R.id.shopsignup);   //or sign up
+        final TextView textViewshoplogin = (TextView) findViewById(R.id.textViewshoplogin); //proceed to the shop profile after login
+
+
 
         shopsignup.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -22,6 +25,16 @@ public class ShopperLoginActivity extends AppCompatActivity {
                 ShopperLoginActivity.this.startActivity(shopsignupIntent);
             }
         });
+
+        textViewshoplogin.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent shoploginIntent = new Intent (ShopperLoginActivity.this,ShopProfileActivity.class);
+                ShopperLoginActivity.this.startActivity(shoploginIntent);
+            }
+        });
+
+
 
 
     }
