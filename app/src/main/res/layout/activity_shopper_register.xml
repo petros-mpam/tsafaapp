@@ -8,11 +8,11 @@
     tools:context="com.tsafaapp.ShopperRegisterActivity">
 
     <EditText
-        android:id="@+id/etpasswordlogin"
+        android:id="@+id/Shopetpasswordlogin"
         android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_alignStart="@+id/etrenterpassword"
-        android:layout_below="@+id/etusernamelogin"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/Shopetrenterpassword"
+        android:layout_below="@+id/Shopetusernamelogin"
 
 
         android:layout_marginTop="16dp"
@@ -22,11 +22,11 @@
         android:inputType="textPassword" />
 
     <EditText
-        android:id="@+id/etusernamelogin"
+        android:id="@+id/Shopetusernamelogin"
         android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_alignStart="@+id/etsurname"
-        android:layout_below="@+id/etsurname"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/Shopetsurname"
+        android:layout_below="@+id/Shopetsurname"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:background="#11000000"
@@ -34,9 +34,9 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/etname"
+        android:id="@+id/Shopetname"
         android:layout_width="200dp"
-        android:layout_height="40dp"
+        android:layout_height="25dp"
 
         android:layout_alignEnd="@+id/cardView"
         android:layout_alignParentTop="true"
@@ -44,30 +44,30 @@
         android:layout_marginTop="52dp"
         android:background="#11000000"
         android:ems="10"
-        android:hint="Name"
+        android:hint="Shop's Name"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/etsurname"
+        android:id="@+id/Shopetsurname"
         android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_alignStart="@+id/etname"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/Shopetname"
 
-        android:layout_below="@+id/etname"
+        android:layout_below="@+id/Shopetname"
         android:layout_marginTop="16dp"
         android:background="#11000000"
 
         android:ems="10"
-        android:hint="Surname"
+        android:hint="Address"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/etemail"
+        android:id="@+id/Shopetemail"
         android:layout_width="200dp"
-        android:layout_height="35dp"
+        android:layout_height="25dp"
 
-        android:layout_alignStart="@+id/etrenterpassword"
-        android:layout_below="@+id/etrenterpassword"
+        android:layout_alignStart="@+id/Shopetrenterpassword"
+        android:layout_below="@+id/Shopetrenterpassword"
         android:layout_marginTop="12dp"
         android:background="#11000000"
         android:ems="10"
@@ -75,13 +75,41 @@
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/etrenterpassword"
+        android:id="@+id/ShopetLongitude"
         android:layout_width="200dp"
-        android:layout_height="35dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/Shopetname"
 
-        android:layout_alignStart="@+id/etsurname"
-        android:layout_below="@+id/etsurname"
-        android:layout_marginTop="110dp"
+        android:layout_below="@+id/Shopetemail"
+        android:layout_marginTop="16dp"
+        android:background="#11000000"
+
+        android:ems="10"
+        android:hint="Map Longitude"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/ShopetLattitude"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/Shopetname"
+
+        android:layout_below="@+id/ShopetLongitude"
+        android:layout_marginTop="16dp"
+        android:background="#11000000"
+
+        android:ems="10"
+        android:hint="Map Lattitude"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/Shopetrenterpassword"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+
+        android:layout_alignStart="@+id/Shopetsurname"
+        android:layout_below="@+id/Shopetsurname"
+        android:layout_marginTop="95dp"
         android:background="#11000000"
         android:ems="10"
         android:hint="Re-enter Password"
@@ -121,8 +149,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Create your acount and advertise your products"
+        android:text="Create your Shop acount and advertise your products"
         android:textColor="#fff"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
 </RelativeLayout>
