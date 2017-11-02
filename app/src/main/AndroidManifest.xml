@@ -42,7 +42,8 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".ShopperLoginActivity" />
-        <activity android:name=".ShopperRegisterActivity"></activity>
+        <activity android:name=".ShopperRegisterActivity" />
+        <activity android:name=".ShopProfileActivity"></activity>
     </application>
 
 </manifest>
