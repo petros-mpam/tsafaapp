@@ -53,7 +53,7 @@
         app:cardBackgroundColor="@color/colorAccent"
         app:cardCornerRadius="25dp"
         app:cardElevation="10dp"
-        android:id="@+id/cvlogin">
+        android:id="@+id/cvShopperlogin">
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"

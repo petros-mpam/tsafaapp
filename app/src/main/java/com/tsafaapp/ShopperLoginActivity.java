@@ -3,6 +3,7 @@ package com.tsafaapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.TextView;
 
@@ -14,7 +15,7 @@ public class ShopperLoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_shopper_login);
 
        final TextView shopsignup = (TextView) findViewById(R.id.shopsignup);   //or sign up
-        final TextView textViewshoplogin = (TextView) findViewById(R.id.textViewshoplogin); //proceed to the shop profile after login
+        final CardView cvShopperlogin = (CardView) findViewById(R.id.cvShopperlogin); //proceed to the shop profile after login
 
 
 
@@ -26,7 +27,7 @@ public class ShopperLoginActivity extends AppCompatActivity {
             }
         });
 
-        textViewshoplogin.setOnClickListener(new View.OnClickListener(){
+        cvShopperlogin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Intent shoploginIntent = new Intent (ShopperLoginActivity.this,ShopProfileActivity.class);
