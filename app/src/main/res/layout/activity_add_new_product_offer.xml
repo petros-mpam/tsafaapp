@@ -1,9 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.tsafaapp.AddNewProductOffer">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/gradient"
+tools:context="com.tsafaapp.AddNewProductOffer">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="11dp"
+        android:text="Logout"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etOfferValue"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+
+
+        android:layout_above="@+id/cardView"
+        android:layout_alignStart="@+id/etCategory"
+        android:layout_marginBottom="37dp"
+        android:background="#11000000"
+        android:ems="12"
+        android:hint="Offer Value"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etInitialValue"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_above="@+id/etOfferValue"
+        android:layout_alignStart="@+id/etProduct"
+        android:layout_marginBottom="19dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="Initial Value"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etCategory"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+
+        android:layout_alignStart="@+id/textView6"
+        android:layout_below="@+id/textView6"
+        android:layout_marginTop="28dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="Product Category"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etProduct"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+
+        android:layout_alignStart="@+id/etCategory"
+        android:layout_below="@+id/etCategory"
+        android:layout_marginTop="34dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="Product"
+        android:inputType="textPersonName" />
+
+
+    <android.support.v7.widget.CardView
+    android:layout_width="300dp"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="130dp"
+    app:cardBackgroundColor="@color/colorAccent"
+    app:cardCornerRadius="25dp"
+    app:cardElevation="10dp"
+    android:id="@+id/cardView">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Upload the offer"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/cardView"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="28dp"
+        android:text="Create your new offer and upload it"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+</RelativeLayout>
