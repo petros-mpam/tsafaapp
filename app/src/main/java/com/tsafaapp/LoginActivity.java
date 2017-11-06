@@ -25,8 +25,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final EditText etmainemaillogin = (EditText) findViewById(R.id.etmainemaillogin);
-        final EditText etmainpasswordlogin = (EditText) findViewById(R.id.etmainpasswordlogin);
+        final EditText etmainemaillogin = (EditText) findViewById(R.id.etshopemaillogin);
+        final EditText etmainpasswordlogin = (EditText) findViewById(R.id.etshoppasswordlogin);
         final CardView cvlogin = (CardView) findViewById(R.id.cvlogin);
         final TextView signup = (TextView) findViewById(R.id.signup);
         final TextView shoppersignup = (TextView) findViewById(R.id.shoppersignup);  //shopperlogin goto1

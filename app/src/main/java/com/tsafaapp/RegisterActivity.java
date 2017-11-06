@@ -31,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
          final EditText etsurname = (EditText) findViewById(R.id.etsurname);
          final EditText etusernamelogin = (EditText) findViewById(R.id.etusernamelogin);
          final EditText etpasswordlogin = (EditText) findViewById(R.id.etpasswordlogin);
-        // EditText etrenterpassword = (EditText) findViewById(R.id.etrenterpassword);
+         final EditText etrenterpassword = (EditText) findViewById(R.id.etrenterpassword);
          final EditText etemail = (EditText) findViewById(R.id.etemail);
          CardView cvregister = (CardView) findViewById(R.id.cardView);
 
