@@ -11,16 +11,28 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.appevents.AppEventsLogger;
 
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import org.json.JSONObject;
+
 public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
-
+        LoginButton loginButton;  //Log in FB
+        CallbackManager callbackManager; //Log in FB
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText etmainpasswordlogin = (EditText) findViewById(R.id.etmainpasswordlogin);
         final CardView cvlogin = (CardView) findViewById(R.id.cvlogin);
         final TextView signup = (TextView) findViewById(R.id.signup);
-        firebaseAuth=FirebaseAuth.getInstance();
+         firebaseAuth=FirebaseAuth.getInstance();
 
         if(firebaseAuth.getCurrentUser()!=null){
             finish();
@@ -74,5 +86,38 @@ public class LoginActivity extends AppCompatActivity {
                 });
             }
         });
+        ////////////////////Edw ksekinaei o kwdikas gia to log in tou fb
+   loginButton = (LoginButton)findViewById(R.id.login_button);
+        loginButton.setReadPermissions("email","public_profile");
+   callbackManager = CallbackManager.Factory.create();
+   loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+       @Override
+       public void onSuccess(LoginResult loginResult) {
+
+           startActivity(new Intent(getApplicationContext(),UserActivity.class));
+
+
+
+       }
+
+       @Override
+       public void onCancel() {
+
+       }
+
+       @Override
+       public void onError(FacebookException error) {
+
+       }
+   });
+
+   ///////////////////////////Edw teleiwnei o kwdikas gia to log in tou fb
+
+
     }
+
+
+
+
 }
+
