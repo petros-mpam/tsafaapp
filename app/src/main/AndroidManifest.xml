@@ -62,7 +62,10 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".ShopperLoginActivity"></activity>
+        <activity android:name=".ShopperLoginActivity" />
+        <activity android:name=".ShopperRegisterActivity" />
+        <activity android:name=".ShopProfileActivity" />
+        <activity android:name=".AddNewProductOfferActivity"></activity>
     </application>
 
 </manifest>
