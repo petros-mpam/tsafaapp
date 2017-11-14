@@ -7,12 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.facebook.GraphRequest;
-import com.facebook.GraphResponse;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import org.json.JSONObject;
 
 public class UserActivity extends AppCompatActivity {
 
@@ -22,6 +18,9 @@ public class UserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
+        TextView tvemail=(TextView)findViewById(R.id.tvemail);
+
+        Button blogout=(Button)findViewById(R.id.bLogout1);
 
         firebaseAuth=FirebaseAuth.getInstance();
         if (firebaseAuth.getCurrentUser()==null){
@@ -31,9 +30,7 @@ public class UserActivity extends AppCompatActivity {
 
         FirebaseUser user=firebaseAuth.getCurrentUser();
 
-        TextView tvemail=(TextView)findViewById(R.id.tvemail);
         tvemail.setText("Welcome "+user.getEmail());
-        Button blogout=(Button)findViewById(R.id.blogout);
 
         blogout.setOnClickListener(new View.OnClickListener() {
             @Override

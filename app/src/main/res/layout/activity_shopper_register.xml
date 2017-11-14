@@ -89,7 +89,7 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/ShopetLattitude"
+        android:id="@+id/ShopetLatitude"
         android:layout_width="200dp"
         android:layout_height="25dp"
         android:layout_alignStart="@+id/Shopetname"
@@ -99,7 +99,7 @@
         android:background="#11000000"
 
         android:ems="10"
-        android:hint="Map Lattitude"
+        android:hint="Map Latitude"
         android:inputType="textPersonName" />
 
     <EditText

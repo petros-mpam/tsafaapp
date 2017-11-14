@@ -11,7 +11,7 @@
         android:id="@+id/tvemail"
         android:layout_width="392dp"
         android:layout_height="20dp"
-        android:layout_below="@+id/blogout"
+        android:layout_below="@+id/bLogout1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/blogout"
+        android:id="@+id/bLogout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

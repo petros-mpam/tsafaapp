@@ -43,9 +43,8 @@
         android:id="@+id/shopprofile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView10"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="11dp"
+        android:layout_alignParentTop="true"
         android:text="Your Shop's Profile"
         android:textColor="#fff"
         android:textStyle="bold" />
@@ -66,9 +65,9 @@
         android:id="@+id/shopsaddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView9"
         android:layout_alignBottom="@+id/textView9"
-        android:layout_toStartOf="@+id/textView10"
+        android:layout_alignEnd="@+id/cardViewaddnewoffer"
+        android:layout_marginEnd="22dp"
         android:text="Shop's Address"
         android:textColor="#fff"
         android:textSize="18sp"
@@ -98,18 +97,6 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/textView6"
-        android:layout_marginEnd="12dp"
-        android:text="Logout"
-        android:textColor="#fff"
-        android:textSize="15sp"
-        android:textStyle="bold"/>
-
     <Button
         android:id="@+id/youroffersbutton"
         android:layout_width="wrap_content"
@@ -118,5 +105,15 @@
         android:layout_below="@+id/textView9"
         android:layout_marginTop="48dp"
         android:text="Your Offers" />
+
+    <Button
+        android:id="@+id/bLogout1"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/youroffersbutton"
+        android:layout_marginTop="7dp"
+        android:text="Logout" />
 
 </RelativeLayout>

@@ -3,8 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tsafaapp.iml" filepath="$PROJECT_DIR$/tsafaapp.iml" />
       <module fileurl="file://C:\Users\atham\.AndroidStudio3.0\tsafaapp4\tsafaapp.iml" filepath="C:\Users\atham\.AndroidStudio3.0\tsafaapp4\tsafaapp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tsafaapp4.iml" filepath="$PROJECT_DIR$/tsafaapp4.iml" />
+      <module fileurl="file://C:\Users\WHAAAZAAAP\StudioProjects\tsafaapp\tsafaapp4.iml" filepath="C:\Users\WHAAAZAAAP\StudioProjects\tsafaapp\tsafaapp4.iml" />
     </modules>
   </component>
 </project>
