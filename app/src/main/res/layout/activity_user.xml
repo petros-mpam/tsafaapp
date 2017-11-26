@@ -7,13 +7,21 @@
     android:background="@drawable/gradient"
     tools:context="com.tsafaapp.UserActivity">
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bLogout1"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="39dp"
+        android:clipToPadding="false"></android.support.v7.widget.RecyclerView>
+
     <TextView
         android:id="@+id/tvemail"
         android:layout_width="392dp"
         android:layout_height="20dp"
+        android:layout_above="@+id/bLogout1"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="114dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,32 +34,11 @@
 
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="18dp"
-        android:layout_marginEnd="30dp"
-
+        android:layout_marginEnd="26dp"
         android:text="Logout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvemail" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="30dp"
-        android:layout_height="60dp"
-        android:layout_alignEnd="@+id/bLogout1"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="27dp"
-        app:srcCompat="@drawable/cast_abc_scrubber_control_to_pressed_mtrl_005" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_marginEnd="18dp"
-        android:layout_toStartOf="@+id/bLogout1"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Informations" />
 </RelativeLayout>
