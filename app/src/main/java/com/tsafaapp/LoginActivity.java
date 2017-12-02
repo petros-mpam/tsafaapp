@@ -41,7 +41,6 @@ public class LoginActivity extends AppCompatActivity {
         final EditText etmainpasswordlogin = (EditText) findViewById(R.id.etmainpasswordlogin);
         final CardView cvlogin = (CardView) findViewById(R.id.cvlogin);
         final TextView signup = (TextView) findViewById(R.id.signup);
-        final TextView shoppersignup = (TextView) findViewById(R.id.shoppersignup);
 
         firebaseAuth=FirebaseAuth.getInstance();
 
@@ -60,14 +59,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        shoppersignup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v2) {
-
-                Intent shoppersignupIntent = new Intent(LoginActivity.this,ShopperLoginActivity.class);
-                LoginActivity.this.startActivity(shoppersignupIntent);
-            }
-        });
 
         cvlogin.setOnClickListener(new View.OnClickListener() {
             @Override

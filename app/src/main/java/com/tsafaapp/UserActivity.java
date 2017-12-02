@@ -19,7 +19,7 @@ public class UserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
         TextView tvemail=(TextView)findViewById(R.id.tvemail);
-
+        Button bcshop=(Button)findViewById(R.id.bcshop);
         Button blogout=(Button)findViewById(R.id.bLogout1);
 
         firebaseAuth=FirebaseAuth.getInstance();
@@ -41,6 +41,13 @@ public class UserActivity extends AppCompatActivity {
             }
         });
 
+        bcshop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                startActivity(new Intent(getApplicationContext(),ShopperRegisterActivity.class));
+            }
+        });
 
 
 

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "773928380716-qc2tsevnjpeggasna53ltq50vjjunh6f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tsafaapp",
+            "certificate_hash": "7e6e70740c99e3e2c7759ce4a506f27e2e017f7e"
+          }
+        },
+        {
           "client_id": "773928380716-unvip0gdtkmmapm8qm3euhfo9cih0bbf.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "773928380716-unvip0gdtkmmapm8qm3euhfo9cih0bbf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

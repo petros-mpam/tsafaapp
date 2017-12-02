@@ -25,10 +25,9 @@ public class ShopProfileActivity extends AppCompatActivity {
 
         if (firebaseAuth.getCurrentUser()==null){
             finish();
-            startActivity(new Intent(this,ShopperLoginActivity.class));
+            startActivity(new Intent(this,LoginActivity.class));
         }
 
-        //FirebaseUser user=firebaseAuth.getCurrentUser();
 
 
 
@@ -37,7 +36,7 @@ public class ShopProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 firebaseAuth.signOut();
                 finish();
-                startActivity(new Intent(ShopProfileActivity.this,ShopperLoginActivity.class));
+                startActivity(new Intent(ShopProfileActivity.this,LoginActivity.class));
             }
         });
 

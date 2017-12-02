@@ -8,39 +8,13 @@
     tools:context="com.tsafaapp.ShopperRegisterActivity">
 
     <EditText
-        android:id="@+id/Shopetpassword"
-        android:layout_width="200dp"
-        android:layout_height="25dp"
-
-
-        android:layout_alignStart="@+id/Shopetemail"
-        android:layout_below="@+id/Shopetemail"
-        android:layout_marginTop="21dp"
-        android:background="#11000000"
-        android:ems="12"
-        android:hint="Password"
-        android:inputType="textPassword" />
-
-    <EditText
-        android:id="@+id/Shopetusername"
-        android:layout_width="200dp"
-        android:layout_height="25dp"
-        android:layout_alignStart="@+id/Shopetname"
-        android:layout_below="@+id/Shopetname"
-        android:layout_marginTop="26dp"
-        android:background="#11000000"
-        android:ems="10"
-        android:hint="Username"
-        android:inputType="textPersonName" />
-
-    <EditText
         android:id="@+id/Shopetname"
         android:layout_width="200dp"
         android:layout_height="25dp"
 
         android:layout_below="@+id/textView6"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="22dp"
         android:background="#11000000"
         android:ems="10"
         android:hint="Shop's Name"
@@ -51,35 +25,22 @@
         android:layout_width="200dp"
         android:layout_height="25dp"
 
-        android:layout_below="@+id/Shopetusername"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
+        android:layout_alignStart="@+id/Shopetname"
+        android:layout_below="@+id/Shopetname"
+        android:layout_marginTop="30dp"
         android:background="#11000000"
         android:ems="10"
         android:hint="Address"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/Shopetemail"
-        android:layout_width="200dp"
-        android:layout_height="25dp"
-
-        android:layout_below="@+id/Shopetaddress"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
-        android:background="#11000000"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress" />
-
-    <EditText
         android:id="@+id/ShopetLongitude"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
 
-        android:layout_alignStart="@+id/Shopetpassword"
-        android:layout_below="@+id/Shopetpassword"
-        android:layout_marginTop="23dp"
+        android:layout_below="@+id/ShopetLatitude"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
         android:background="#11000000"
         android:ems="10"
         android:hint="Map Longitude"
@@ -90,8 +51,8 @@
         android:layout_width="200dp"
         android:layout_height="25dp"
 
-        android:layout_alignStart="@+id/ShopetLongitude"
-        android:layout_below="@+id/ShopetLongitude"
+        android:layout_below="@+id/Shopetaddress"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="22dp"
         android:background="#11000000"
         android:ems="10"
@@ -132,7 +93,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Create your Shop acount and advertise your products"
+        android:text="Create your Shop account and advertise your products"
         android:textColor="#fff"
         android:textStyle="bold" />
 

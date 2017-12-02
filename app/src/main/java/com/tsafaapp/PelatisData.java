@@ -5,7 +5,15 @@ package com.tsafaapp;
  */
 
 public class PelatisData {
-    String id,name,surname,username,email;
+    String id,name,surname,username,email,idpro;
+
+    public String getIdpro() {
+        return idpro;
+    }
+
+    public void setIdpro(String idpro) {
+        this.idpro = idpro;
+    }
 
     public String getName() {
         return name;
@@ -47,12 +55,13 @@ public class PelatisData {
         this.email = email;
     }
 
-    public PelatisData(String id,String name, String surname, String username, String email){
+    public PelatisData(String id,String name, String surname, String username, String email,String idpro){
         this.id=id;
         this.name=name;
         this.surname=surname;
         this.username=username;
         this.email=email;
+        this.idpro=idpro;
 
     }
 
