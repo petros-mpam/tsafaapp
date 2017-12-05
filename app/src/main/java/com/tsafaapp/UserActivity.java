@@ -9,6 +9,10 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
 
 public class UserActivity extends AppCompatActivity {
 
@@ -29,6 +33,28 @@ public class UserActivity extends AppCompatActivity {
         }
 
         FirebaseUser user=firebaseAuth.getCurrentUser();
+
+
+        //Read Data from the Database about recycleview menu (peter)
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("recyler_data");
+        ///////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         tvemail.setText("Welcome "+user.getEmail());
 
