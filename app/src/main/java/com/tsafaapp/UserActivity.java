@@ -38,7 +38,7 @@ public class UserActivity extends AppCompatActivity {
         //Read Data from the Database about recycleview menu (peter)
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("recyler_data");
-        ///////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////
 
 
 
