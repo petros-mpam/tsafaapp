@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/action_love"
+        android:icon="@drawable/ic_favorite_24dp"
+        android:title="Love"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_info"
+        android:icon="@drawable/ic_info_black_24dp"
+        android:title="Info"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_remove"
+        android:icon="@drawable/ic_remove_24dp"
+        android:title="Remove"
+        app:showAsAction="ifRoom"/>
 
 </menu>
