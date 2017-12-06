@@ -15,7 +15,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class UserActivity extends AppCompatActivity {
-
+Button clickme;
+public static TextView textclickme;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -25,6 +26,22 @@ public class UserActivity extends AppCompatActivity {
         TextView tvemail=(TextView)findViewById(R.id.tvemail);
         Button bcshop=(Button)findViewById(R.id.bcshop);
         Button blogout=(Button)findViewById(R.id.bLogout1);
+
+        clickme = (Button) findViewById(R.id.clickme);
+        textclickme = (TextView)findViewById(R.id.textclickme);
+
+        clickme.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+
+fetchData process = new fetchData();
+process.execute();
+
+
+            }
+        });
+
 
         firebaseAuth=FirebaseAuth.getInstance();
         if (firebaseAuth.getCurrentUser()==null){

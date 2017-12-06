@@ -51,4 +51,20 @@
         android:layout_marginStart="12dp"
         android:text="Create shop" />
 
+    <Button
+        android:id="@+id/clickme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recyclerView"
+        android:layout_centerHorizontal="true"
+        android:text="parsing" />
+
+    <TextView
+        android:id="@+id/textclickme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvemail"
+        android:layout_centerHorizontal="true"
+        android:text="TextView" />
+
 </RelativeLayout>
