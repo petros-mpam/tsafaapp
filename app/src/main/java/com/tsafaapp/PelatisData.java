@@ -4,8 +4,8 @@ package com.tsafaapp;
  * Created by WHAAAZAAAP on 14/11/2017.
  */
 
-public class PelatisData {
-    String id,name,surname,username,email,idpro;
+ public class PelatisData {
+    String name,surname,username,email,idpro;
 
     public String getIdpro() {
         return idpro;
@@ -21,14 +21,6 @@ public class PelatisData {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getSurname() {
@@ -55,8 +47,8 @@ public class PelatisData {
         this.email = email;
     }
 
-    public PelatisData(String id,String name, String surname, String username, String email,String idpro){
-        this.id=id;
+    public PelatisData(String name, String surname, String username, String email,String idpro){
+
         this.name=name;
         this.surname=surname;
         this.username=username;

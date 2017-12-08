@@ -7,7 +7,7 @@ package com.tsafaapp;
 public class PolitisData {
 
 
-    String id;
+
     String name;
     String address;
     String longtitude;
@@ -19,13 +19,7 @@ public class PolitisData {
         return name;
     }
 
-    public String getId() {
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public void setName(String name) {
         this.name = name;
@@ -54,8 +48,8 @@ public class PolitisData {
     }
 
 
-    public PolitisData(String id,String name, String address,String longtitude,String latitude){
-        this.id=id;
+    public PolitisData(String name, String address,String longtitude,String latitude){
+
         this.name=name;
         this.address=address;
         this.longtitude=longtitude;

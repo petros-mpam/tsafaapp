@@ -23,6 +23,7 @@ public class ShopperRegisterActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
 
     DatabaseReference Shop;
+    DatabaseReference Users ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,7 @@ public class ShopperRegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_shopper_register);
         firebaseAuth =firebaseAuth.getInstance();
         Shop=FirebaseDatabase.getInstance().getReference("Shop");
-
+        Users =FirebaseDatabase.getInstance().getReference("Users");
         final EditText Shopetname = (EditText) findViewById(R.id.Shopetname);
         final EditText Shopetaddress = (EditText) findViewById(R.id.Shopetaddress);
         final EditText ShopetLongitude = (EditText) findViewById(R.id.ShopetLongitude);
@@ -47,8 +48,8 @@ public class ShopperRegisterActivity extends AppCompatActivity {
                     String address=Shopetaddress.getText().toString().trim();
                     String longtitude=ShopetLongitude.getText().toString().trim();
                     String latitude=ShopetLatitude.getText().toString().trim();
-                    final  String id=Shop.push().getKey();
-                    final   PolitisData politisData=new PolitisData(id,name,address,longtitude,latitude);
+
+                    final   PolitisData politisData=new PolitisData(name,address,longtitude,latitude);
 
 
                     if(TextUtils.isEmpty(name)){
@@ -74,9 +75,11 @@ public class ShopperRegisterActivity extends AppCompatActivity {
 
 
                     Toast.makeText(ShopperRegisterActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
+                    String id=Shop.push().getKey();
                     Shop.child(id).setValue(politisData);
+                    String user=firebaseAuth.getCurrentUser().getUid();
+                    Users.child(user).child("idpro").setValue(id);
 
-                    FirebaseUser user=firebaseAuth.getCurrentUser();
                     finish();
                     startActivity(new Intent(getApplicationContext(),ShopProfileActivity.class));
 

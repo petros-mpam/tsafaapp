@@ -43,6 +43,7 @@ public class RegisterActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(),UserActivity.class));
         }
 
+
         cvregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,8 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
                 final String password=etpasswordlogin.getText().toString().trim();
                 final String email=etemail.getText().toString().trim();
                 final String idp="0";
-                final String id=Users.push().getKey();
-                final PelatisData pelatisData=new PelatisData(id,name,surname,username,email,idp);
+                final PelatisData pelatisData=new PelatisData(name,surname,username,email,idp);
 
                 if(TextUtils.isEmpty(email)){
                     Toast.makeText(RegisterActivity.this, "Please enter email", Toast.LENGTH_SHORT).show();
@@ -87,9 +87,10 @@ public class RegisterActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(RegisterActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
-                            Users.child(id).setValue(pelatisData);
-                            finish();
+                            String user1=firebaseAuth.getCurrentUser().getUid();
+                            Users.child(user1).setValue(pelatisData);
                             startActivity(new Intent(getApplicationContext(),UserActivity.class));
+                            finish();
                         }else{
                             Toast.makeText(RegisterActivity.this, "Could not register,please try again", Toast.LENGTH_SHORT).show();
                         }
