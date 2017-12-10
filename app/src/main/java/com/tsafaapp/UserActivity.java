@@ -57,6 +57,8 @@ process.execute();
             }
         });
 
+////////////////////////////////////////////////////////////////////////////////
+/// // DN KSERW PWS TO EKANA ALLA MIN TO AGGIKSETE THA FIGETE XWRIS KEFALI/////
 
         firebaseAuth=FirebaseAuth.getInstance();
    final     FirebaseUser user=firebaseAuth.getCurrentUser();
@@ -107,7 +109,7 @@ process.execute();
             }
         });
 
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
       // tvemail.setText("Welcome "+idpro1);
         if (firebaseAuth.getCurrentUser()==null){
