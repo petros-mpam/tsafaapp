@@ -60,6 +60,7 @@ process.execute();
 ////////////////////////////////////////////////////////////////////////////////
 /// // DN KSERW PWS TO EKANA ALLA MIN TO AGGIKSETE THA FIGETE XWRIS KEFALI/////
 /// ////////// AUTO TON KODIKA 8A TON KANETE COPY PASTE SE KATHE KLASI GIA NA MPORITE NA PARETE TO ID APO KATHE MAGAZI KAI TON USER POU TREXEI EKINI TIN WRA//////
+/// //// I IF DN XRIAZETAI STIS ALLES KARTELES MONO EDW GIA ELENXO ////
 
         firebaseAuth=FirebaseAuth.getInstance();
    final     FirebaseUser user=firebaseAuth.getCurrentUser();
