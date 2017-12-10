@@ -48,8 +48,8 @@ public class ShopperRegisterActivity extends AppCompatActivity {
                     String address=Shopetaddress.getText().toString().trim();
                     String longtitude=ShopetLongitude.getText().toString().trim();
                     String latitude=ShopetLatitude.getText().toString().trim();
-
-                    final   PolitisData politisData=new PolitisData(name,address,longtitude,latitude);
+                    String id=Shop.push().getKey();
+                    final   PolitisData politisData=new PolitisData(name,address,longtitude,latitude,id);
 
 
                     if(TextUtils.isEmpty(name)){
@@ -73,13 +73,10 @@ public class ShopperRegisterActivity extends AppCompatActivity {
                     }
 
 
-
-                    Toast.makeText(ShopperRegisterActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
-                    String id=Shop.push().getKey();
                     Shop.child(id).setValue(politisData);
                     String user=firebaseAuth.getCurrentUser().getUid();
                     Users.child(user).child("idpro").setValue(id);
-
+                    Toast.makeText(ShopperRegisterActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
                     finish();
                     startActivity(new Intent(getApplicationContext(),ShopProfileActivity.class));
 

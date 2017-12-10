@@ -5,7 +5,9 @@ package com.tsafaapp;
  */
 
  public class PelatisData {
-    String name,surname,username,email,idpro;
+    public String name,surname,username,email,idpro;
+    public PelatisData(){}
+
 
     public String getIdpro() {
         return idpro;

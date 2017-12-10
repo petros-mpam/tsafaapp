@@ -52,7 +52,7 @@ public class RegisterActivity extends AppCompatActivity {
                 final String username=etusernamelogin.getText().toString().trim();
                 final String password=etpasswordlogin.getText().toString().trim();
                 final String email=etemail.getText().toString().trim();
-                final String idp="0";
+                final String idp="";
                 final PelatisData pelatisData=new PelatisData(name,surname,username,email,idp);
 
                 if(TextUtils.isEmpty(email)){

@@ -1,5 +1,6 @@
 package com.tsafaapp;
 
+import android.app.DownloadManager;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,12 +9,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.games.snapshot.Snapshot;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -24,24 +28,23 @@ public static TextView textclickme;
     private FirebaseAuth firebaseAuth;
 
     final FirebaseDatabase Usersdatabase=FirebaseDatabase.getInstance();
+    final FirebaseDatabase ShopDatabase=FirebaseDatabase.getInstance();
     DatabaseReference Users=Usersdatabase.getReference("Users");
-    DatabaseReference Shop;
+    DatabaseReference Shop=ShopDatabase.getReference("Shop");
 
-
+     String idpro1;
+    Query query = Shop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
-        TextView tvemail=(TextView)findViewById(R.id.tvemail);
-        Button bcshop=(Button)findViewById(R.id.bcshop);
+       final TextView tvemail=(TextView)findViewById(R.id.tvemail);
+     final   Button bcshop=(Button)findViewById(R.id.bcshop);
         Button blogout=(Button)findViewById(R.id.bLogout1);
         firebaseAuth =firebaseAuth.getInstance();
         clickme = (Button) findViewById(R.id.clickme);
         textclickme = (TextView)findViewById(R.id.textclickme);
-
-        Shop=FirebaseDatabase.getInstance().getReference("Shop");
-        Users =FirebaseDatabase.getInstance().getReference("Users");
 
 
         clickme.setOnClickListener(new View.OnClickListener(){
@@ -56,39 +59,68 @@ process.execute();
 
 
         firebaseAuth=FirebaseAuth.getInstance();
-        FirebaseUser user=firebaseAuth.getCurrentUser();
-       String user1=firebaseAuth.getCurrentUser().getUid();
+   final     FirebaseUser user=firebaseAuth.getCurrentUser();
+       String user1=user.getUid();
 
-
-/*
-        Users.addListenerForSingleValueEvent(new ValueEventListener() {
-
-
+        Users.child(user1).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot pelatisSnapshot: dataSnapshot.getChildren()) {
-                    PelatisData pelatisData=pelatisSnapshot.getValue(PelatisData.class);
+                PelatisData pelatisData = dataSnapshot.getValue(PelatisData.class);
+                  idpro1 = pelatisData.getIdpro();
+                if (idpro1.equals("")){
+                    bcshop.setText("Create Shop");
+                    bcshop.setOnClickListener(new View.OnClickListener() {
+                                                  @Override
+                                                  public void onClick(View v) {
+                                                      startActivity(new Intent(getApplicationContext(), ShopperRegisterActivity.class));
+                                                      finish();
+                                                  }
+                                              });}
+                                              else {
+                    Shop.child(idpro1).addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            PolitisData politisData = dataSnapshot.getValue(PolitisData.class);
+                            String name1 = politisData.getName();
+                            tvemail.setText("Welcome " + name1);
+                            bcshop.setText("My Shop");
+                            bcshop.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    startActivity(new Intent(getApplicationContext(), ShopProfileActivity.class));
+                                }
+                            });
 
-                  //  if (pelatisData.getIdpro()==("-L-rWXcK9An-72PCVBlU"))
-                  //  {
-                        startActivity(new Intent(getApplicationContext(),ShopProfileActivity.class));
-                   // }
-                }
+                            query = Shop.child(idpro1);
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });}
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
             }
-
         });
 
-*/
+
+
+      // tvemail.setText("Welcome "+idpro1);
         if (firebaseAuth.getCurrentUser()==null){
             finish();
             startActivity(new Intent(this,LoginActivity.class));
         }
-
+        bcshop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),ShopperRegisterActivity.class));
+                finish();
+            }
+        });
 
 
 
@@ -102,7 +134,7 @@ process.execute();
 
 
 
-        tvemail.setText("Welcome "+user.getUid());
+      //  tvemail.setText("Welcome "+user.getUid());
 
         blogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,12 +145,7 @@ process.execute();
             }
         });
 
-        bcshop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),ShopperRegisterActivity.class));
-            }
-        });
+
 
 
 
