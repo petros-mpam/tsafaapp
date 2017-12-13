@@ -59,7 +59,25 @@ public static TextView textclickme;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
-      
+        //card view code
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+
+        int count = 0;
+        for (String Name : c_names)
+        {
+            arrayList.add(new Items(Name,a_items[count]));
+            count++;
+        }
+
+        adapter = new RecyclerAdapter(arrayList);
+        recyclerView.setAdapter(adapter);
+//
        final TextView tvemail=(TextView)findViewById(R.id.tvemail);
      final   Button bcshop=(Button)findViewById(R.id.bcshop);
         Button blogout=(Button)findViewById(R.id.bLogout1);
