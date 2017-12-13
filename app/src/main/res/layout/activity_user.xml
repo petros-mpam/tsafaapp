@@ -3,18 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/activity_user"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
     tools:context="com.tsafaapp.UserActivity">
 
+    <include
+        layout="@layout/toolbar_layout"
+        android:id="@+id/include"></include>
+
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bLogout1"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="39dp"
-        android:clipToPadding="false"></android.support.v7.widget.RecyclerView>
+        android:layout_centerVertical="true"
+        android:clipToPadding="false">
+
+    </android.support.v7.widget.RecyclerView>
 
     <TextView
         android:id="@+id/tvemail"
@@ -22,7 +28,7 @@
         android:layout_height="20dp"
         android:layout_above="@+id/bLogout1"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="6dp"
+        android:layout_marginBottom="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -55,14 +61,17 @@
         android:id="@+id/clickme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/recyclerView"
-        android:layout_centerHorizontal="true"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textclickme"
         android:text="parsing" />
 
     <TextView
         android:id="@+id/textclickme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/recyclerview"
+        android:layout_centerInParent="true"
         android:layout_above="@+id/tvemail"
         android:layout_centerHorizontal="true"
         android:text="TextView" />
