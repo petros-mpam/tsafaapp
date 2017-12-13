@@ -4,9 +4,13 @@ import android.app.DownloadManager;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.games.snapshot.Snapshot;
@@ -23,7 +27,23 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class UserActivity extends AppCompatActivity {
-Button clickme;
+
+    String[] c_names = { "women","men","bags","watches","jewls","sunglasses","accessories","kids"};
+
+    int [] a_items = {R.drawable.women1,R.drawable.men1,R.drawable.bags1,R.drawable.watches1,R.drawable.jewls1,
+            R.drawable.sunglasses1 ,R.drawable.accessories1,R.drawable.kids1};
+
+    Toolbar toolbar;
+
+    RecyclerView recyclerView;
+    RecyclerAdapter adapter;
+
+    RecyclerView.LayoutManager layoutManager;
+
+    ArrayList<Items> arrayList = new ArrayList<>();
+
+    Button clickme;
+
 public static TextView textclickme;
     private FirebaseAuth firebaseAuth;
 
@@ -39,6 +59,25 @@ public static TextView textclickme;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
+        //card view code
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+
+        int count = 0;
+        for (String Name : c_names)
+        {
+            arrayList.add(new Items(Name,a_items[count]));
+            count++;
+        }
+
+        adapter = new RecyclerAdapter(arrayList);
+        recyclerView.setAdapter(adapter);
+//
        final TextView tvemail=(TextView)findViewById(R.id.tvemail);
      final   Button bcshop=(Button)findViewById(R.id.bcshop);
         Button blogout=(Button)findViewById(R.id.bLogout1);
@@ -150,6 +189,7 @@ process.execute();
                 startActivity(new Intent(UserActivity.this,LoginActivity.class));
             }
         });
+
 
 
 
