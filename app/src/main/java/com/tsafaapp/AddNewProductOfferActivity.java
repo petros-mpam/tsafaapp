@@ -25,10 +25,6 @@ public class AddNewProductOfferActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_new_product);
         firebaseAuth =firebaseAuth.getInstance();
 
-        if(firebaseAuth.getCurrentUser()!=null){
-            finish();
-            startActivity(new Intent(getApplicationContext(),UserActivity.class));
-        }
 
         CardView cardView=(CardView)findViewById(R.id.cardView);
         final EditText etCategory=(EditText)findViewById(R.id.etCategory);

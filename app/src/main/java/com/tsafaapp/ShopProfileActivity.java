@@ -45,8 +45,9 @@ public class ShopProfileActivity extends AppCompatActivity {
         cardViewaddnewoffer.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent shopAddOfferIntent = new Intent(ShopProfileActivity.this,AddNewProductOfferActivity.class);
-                ShopProfileActivity.this.startActivity(shopAddOfferIntent);
+             finish();
+             startActivity(new Intent(ShopProfileActivity.this,AddNewProductOfferActivity.class));
+
             }
         });
 

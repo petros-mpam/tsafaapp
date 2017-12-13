@@ -92,6 +92,7 @@ process.execute();
                             bcshop.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
+
                                     startActivity(new Intent(getApplicationContext(), ShopProfileActivity.class));
                                 }
                             });
