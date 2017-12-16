@@ -50,49 +50,34 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/shopsname"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvshopsname"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/shopsaddress"
-        android:layout_below="@+id/textView6"
-        android:layout_marginTop="55dp"
-        android:text="Shop's Name"
-        android:textColor="#fff"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/shopsaddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView9"
-        android:layout_alignEnd="@+id/cardViewaddnewoffer"
-        android:layout_marginEnd="22dp"
-        android:text="Shop's Address"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvname"
+        android:layout_marginTop="18dp"
         android:textColor="#fff"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvname"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/shopsname"
-        android:layout_alignBottom="@+id/shopsname"
-        android:layout_alignStart="@+id/cardView"
-        android:text="Name:"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/shopprofile"
+        android:layout_marginTop="26dp"
         android:textColor="#fff"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvaddress"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView8"
-        android:layout_below="@+id/textView8"
-        android:layout_marginTop="32dp"
-        android:text="Address:"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvshopsname"
+        android:layout_marginTop="29dp"
         android:textColor="#fff"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -101,8 +86,8 @@
         android:id="@+id/youroffersbutton"
         android:layout_width="wrap_content"
         android:layout_height="40sp"
-        android:layout_alignStart="@+id/textView9"
-        android:layout_below="@+id/textView9"
+        android:layout_alignStart="@+id/tvaddress"
+        android:layout_below="@+id/tvaddress"
         android:layout_marginTop="48dp"
         android:text="Your Offers" />
 

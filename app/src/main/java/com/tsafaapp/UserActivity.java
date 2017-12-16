@@ -1,5 +1,10 @@
 package com.tsafaapp;
 
+
+/**
+ * Created by WHAAAZAAAP on 14/10/2017.
+ */
+
 import android.app.DownloadManager;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +18,6 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.google.android.gms.games.snapshot.Snapshot;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
@@ -53,7 +57,6 @@ public static TextView textclickme;
     DatabaseReference Shop=ShopDatabase.getReference("Shop");
 
      String idpro1;
-    Query query = Shop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -136,7 +139,6 @@ process.execute();
                                 }
                             });
 
-                            query = Shop.child(idpro1);
                         }
 
                         @Override

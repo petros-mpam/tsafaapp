@@ -1,13 +1,15 @@
 package com.tsafaapp;
 
 /**
- * Created by Teo on 12/11/2017.
+ * Created by Teo on 12/11/2017. Updated from WHAAAZAAAP 16/12/2017.
  */
 
 public class Items {
 
     private String name;
     private int flag_id;
+
+    public Items(){}
 
     public Items(String name,int flag_id)
     {
