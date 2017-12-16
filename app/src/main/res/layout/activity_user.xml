@@ -17,7 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/include"
+        android:layout_marginTop="93dp"
         android:clipToPadding="false">
 
     </android.support.v7.widget.RecyclerView>
@@ -63,17 +64,16 @@
         android:layout_height="wrap_content"
 
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textclickme"
+        android:layout_centerHorizontal="true"
         android:text="parsing" />
 
     <TextView
         android:id="@+id/textclickme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/recyclerview"
-        android:layout_centerInParent="true"
         android:layout_above="@+id/tvemail"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
         android:text="TextView" />
 
 </RelativeLayout>
