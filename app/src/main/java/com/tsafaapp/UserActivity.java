@@ -7,15 +7,19 @@ package com.tsafaapp;
 
 import android.app.DownloadManager;
 import android.content.Intent;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -30,7 +34,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class UserActivity extends AppCompatActivity {
+public class UserActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
     String[] c_names = { "women","men","bags","watches","jewls","sunglasses","accessories","kids"};
 
@@ -202,5 +206,37 @@ process.execute();
 
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu_items,menu);
+        MenuItem menuItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
+        searchView.setOnQueryTextListener(this);
+        return true;
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+
+        newText = newText.toLowerCase();
+        ArrayList<Items> newList = new ArrayList<>();
+        for (Items items : arrayList)
+        {
+            String name = items.getName().toLowerCase();
+            if(name.contains(newText))
+                newList.add(items);
+
+        }
+
+        adapter.setFilter(newList);
+        return true;
     }
 }
