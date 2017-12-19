@@ -26,9 +26,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.tsafaapp.domain.Items;
-import com.tsafaapp.domain.PelatisData;
-import com.tsafaapp.domain.PolitisData;
+
 
 import java.util.ArrayList;
 
