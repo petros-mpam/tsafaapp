@@ -15,9 +15,9 @@ import java.util.HashMap;
 
 public class AddNewProductOfferActivity extends AppCompatActivity {
 
-    private FirebaseAuth firebaseAuth;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference Products=database.getReference("Products");
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
