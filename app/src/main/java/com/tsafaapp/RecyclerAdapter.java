@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.tsafaapp.domain.Items;
+
 import java.util.ArrayList;
 
 /**
@@ -47,6 +49,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         return arrayList.size();
     }
 
+    public void setFilter(ArrayList<Items> newList)
+    {
+        arrayList = new ArrayList<>();
+        arrayList.addAll(newList);
+
+        notifyDataSetChanged();
+
+    }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder
     {

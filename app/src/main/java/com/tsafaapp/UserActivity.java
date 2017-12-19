@@ -5,7 +5,6 @@ package com.tsafaapp;
  * Created by WHAAAZAAAP on 14/10/2017.
  */
 
-import android.app.DownloadManager;
 import android.content.Intent;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -13,54 +12,44 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.tsafaapp.domain.Items;
+import com.tsafaapp.domain.PelatisData;
+import com.tsafaapp.domain.PolitisData;
 
 import java.util.ArrayList;
 
 public class UserActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
-    String[] c_names = { "women","men","bags","watches","jewls","sunglasses","accessories","kids"};
-
-    int [] a_items = {R.drawable.women1,R.drawable.men1,R.drawable.bags1,R.drawable.watches1,R.drawable.jewls1,
-            R.drawable.sunglasses1 ,R.drawable.accessories1,R.drawable.kids1};
-
-    Toolbar toolbar;
-
-    RecyclerView recyclerView;
-    RecyclerAdapter adapter;
-
-    RecyclerView.LayoutManager layoutManager;
-
-    ArrayList<Items> arrayList = new ArrayList<>();
-
-    Button clickme;
-
 public static TextView textclickme;
-    private FirebaseAuth firebaseAuth;
-
     final FirebaseDatabase Usersdatabase=FirebaseDatabase.getInstance();
     final FirebaseDatabase ShopDatabase=FirebaseDatabase.getInstance();
+    String[] c_names = { "women","men","bags","watches","jewls","sunglasses","accessories","kids"};
+    int [] a_items = {R.drawable.women1,R.drawable.men1,R.drawable.bags1,R.drawable.watches1,R.drawable.jewls1,
+            R.drawable.sunglasses1 ,R.drawable.accessories1,R.drawable.kids1};
+    Toolbar toolbar;
+    RecyclerView recyclerView;
+    RecyclerAdapter adapter;
+    RecyclerView.LayoutManager layoutManager;
+    ArrayList<Items> arrayList = new ArrayList<>();
+    Button clickme;
     DatabaseReference Users=Usersdatabase.getReference("Users");
     DatabaseReference Shop=ShopDatabase.getReference("Shop");
-
      String idpro1;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
