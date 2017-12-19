@@ -34,8 +34,7 @@ public class UserActivity extends AppCompatActivity {
 
     String[] c_names = { "women","men","bags","watches","jewls","sunglasses","accessories","kids"};
 
-    int [] a_items = {R.drawable.women1,R.drawable.men1,R.drawable.bags1,R.drawable.watches1,R.drawable.jewls1,
-            R.drawable.sunglasses1 ,R.drawable.accessories1,R.drawable.kids1};
+   int [] a_items = {R.drawable.women1,R.drawable.men1,R.drawable.bags1,R.drawable.watches1,R.drawable.jewls1, R.drawable.sunglasses1 ,R.drawable.accessories1,R.drawable.kids1};
 
     Toolbar toolbar;
 
@@ -191,12 +190,6 @@ process.execute();
                 startActivity(new Intent(UserActivity.this,LoginActivity.class));
             }
         });
-
-
-
-
-
-
 
 
 
