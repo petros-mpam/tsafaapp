@@ -1,4 +1,4 @@
-package com.example.peter.tsafaapp;
+package com.tsafaapp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
