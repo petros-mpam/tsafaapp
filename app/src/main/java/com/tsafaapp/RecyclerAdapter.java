@@ -72,12 +72,5 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     }
 
 
-    public void setFilter(ArrayList<Items> newList)
-    {
-        arrayList = new ArrayList<>();
-        arrayList.addAll(newList);
 
-        notifyDataSetChanged();
-
-    }
 }
