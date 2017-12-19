@@ -70,4 +70,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
             c_name = (TextView) itemView.findViewById(R.id.name);
         }
     }
+
+
+    public void setFilter(ArrayList<Items> newList)
+    {
+        arrayList = new ArrayList<>();
+        arrayList.addAll(newList);
+
+        notifyDataSetChanged();
+
+    }
 }
