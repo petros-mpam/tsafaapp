@@ -23,7 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference Users=database.getReference("Users");
 
-    
+
 
 
     @Override
