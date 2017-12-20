@@ -1,4 +1,4 @@
-package com.example.peter.tsafaapp;
+package com.tsafaapp;
 
 import org.junit.Test;
 

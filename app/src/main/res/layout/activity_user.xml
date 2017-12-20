@@ -2,15 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/activity_user"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
     tools:context="com.tsafaapp.UserActivity">
 
     <include
-        layout="@layout/toolbar_layout"
-        android:id="@+id/include"></include>
+        android:id="@+id/include"
+        layout="@layout/toolbar_layout"></include>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview"
