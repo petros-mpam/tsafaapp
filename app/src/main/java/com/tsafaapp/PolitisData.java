@@ -51,7 +51,7 @@ public class PolitisData {
         return latitude;
     }
 
-    
+
     public void setLatitude(String latitude) {
         this.latitude = latitude;
     }
